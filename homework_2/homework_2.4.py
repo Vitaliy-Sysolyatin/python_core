@@ -1,7 +1,7 @@
 secret_number = 37
 count_of_attempts = 0
 
-while 1:
+while True:
     number = int(input("Введите число: "))
     count_of_attempts += 1
 
