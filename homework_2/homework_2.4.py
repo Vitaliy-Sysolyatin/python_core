@@ -7,7 +7,7 @@ while True:
 
     if number == secret_number:
         print("Успех! Число отгадано")
-        print(f'Количество попыток: {count_of_attempts}')
+        print(f"Количество попыток: {count_of_attempts}")
         break
     elif number > secret_number:
         print("Введённое число больше секретного")
