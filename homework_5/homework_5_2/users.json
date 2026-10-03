@@ -1,0 +1,17 @@
+[
+    {
+        "login": "reviewer",
+        "password": "Qwer12345",
+        "expected_result": "SUCCESS"
+    },
+    {
+        "login": "blocked_user",
+        "password": "MyCoolBlockedPassword",
+        "expected_result": "BLOCKED"
+    },
+    {
+        "login": "user512",
+        "password": "MyNewPassword001",
+        "expected_result": "NOT_FOUND"
+    }
+]
