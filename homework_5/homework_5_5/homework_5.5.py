@@ -37,9 +37,11 @@ def load_tests(filename: str) -> list[dict]:
 
 
 def create_report(tests: list[dict]) -> dict:
-    statistics = {"PASS": len([test for test in tests if test["status"] == "PASS"]),
+    statistics = {
+        "PASS": len([test for test in tests if test["status"] == "PASS"]),
         "FAIL": len([test for test in tests if test["status"] == "FAIL"]),
-        "SKIP": len([test for test in tests if test["status"] == "SKIP"])}
+        "SKIP": len([test for test in tests if test["status"] == "SKIP"])
+    }
 
     failed_tests = list(map(lambda test: test["name"], filter(lambda test: test["status"] == "FAIL", tests)))
 
@@ -47,8 +49,16 @@ def create_report(tests: list[dict]) -> dict:
 
     total_time = round(reduce(lambda total, test: total + test["duration"], tests, 0), 2)
 
-    return {"total_tests": len(tests), "statistics": statistics, "failed_tests": failed_tests,
-        "longest_test": {"name": longest_test["name"], "duration": longest_test["duration"]}, "total_time": total_time}
+    return {
+        "total_tests": len(tests),
+        "statistics": statistics,
+        "failed_tests": failed_tests,
+        "longest_test":
+            {
+                "name": longest_test["name"],
+                "duration": longest_test["duration"]
+            },
+        "total_time": total_time}
 
 
 try:

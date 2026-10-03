@@ -1,11 +1,13 @@
 from functools import reduce
 
-tests = [{"name": "auth_test", "status": "PASS", "duration": 1.0},
+tests = [
+    {"name": "auth_test", "status": "PASS", "duration": 1.0},
     {"name": "profile_test", "status": "PASS", "duration": 4.6},
     {"name": "payment_test", "status": "SKIP", "duration": 3.2},
     {"name": "settings_test", "status": "FAIL", "duration": 2.0},
     {"name": "cart_test", "status": "FAIL", "duration": 0.7},
-    {"name": "registration_test", "status": "PASS", "duration": 10}, ]
+    {"name": "registration_test", "status": "PASS", "duration": 10},
+]
 
 statistics = {"PASS": 0, "FAIL": 0, "SKIP": 0, }
 
